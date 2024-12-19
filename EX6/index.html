@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Shop</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        background-color: #f9e5b5;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+      }
+
+      header .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      header .logo img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      header nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      }
+
+      .cart {
+        background-color: #f1f5ff;
+        padding: 5px 10px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+      }
+
+      .container {
+        display: flex;
+        padding: 20px;
+      }
+
+      .sidebar {
+        width: 20%;
+        padding-right: 10px;
+        border: 1px black solid;
+        height: 300px;
+      }
+
+      .sidebar h3 {
+        margin-bottom: 10px;
+        padding-left: 5px;
+      }
+
+      .sidebar ul {
+        list-style: none;
+        padding-left: 5px;
+      }
+
+      .sidebar ul li {
+        margin-bottom: 5px;
+        padding-left: 5px;
+      }
+
+      .sidebar button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: #e1f5f1;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 5px;
+      }
+
+      .content {
+        width: 80%;
+        padding-left: 20px;
+      }
+
+      .content .search-bar {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .content .search-bar input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .content .search-bar select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .products {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .product {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+        width: 300px;
+        height: 300px;
+      }
+
+      .product img {
+        width: 100%;
+        height: auto;
+      }
+
+      .product h4 {
+        margin: 10px 0;
+        font-size: 16px;
+      }
+
+      .product .price {
+        color: #007bff;
+        font-weight: bold;
+      }
+
+      .product .discount {
+        color: red;
+        font-size: 14px;
+      }
+
+      .pagination {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .pagination button {
+        padding: 5px 10px;
+        margin: 0 5px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      footer {
+        background-color: #f9e5b5;
+        padding: 10px;
+        text-align: center;
+      }
+
+      footer p {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="placeholder-logo.png" alt="My Shop Logo" />
+        <h3>My Shop</h3>
+      </div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About us</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="cart">My Cart (0)</div>
+    </header>
+
+    <div class="container">
+      <aside class="sidebar">
+        <h3>Categories</h3>
+        <ul>
+          <li><input type="checkbox" checked /> Devices</li>
+          <li><input type="checkbox" checked /> Furniture</li>
+          <li><input type="checkbox" checked /> Clothes</li>
+          <li><input type="checkbox" checked /> Foods & Drink</li>
+          <li><input type="checkbox" checked /> Materials</li>
+          <li><input type="checkbox" checked /> Computers</li>
+        </ul>
+        <button>Show more...</button>
+      </aside>
+
+      <main class="content">
+        <div class="search-bar">
+          <input type="text" placeholder="Enter keyword to search" />
+          <select>
+            <option>Sort by</option>
+          </select>
+          <select>
+            <option>Order by</option>
+          </select>
+        </div>
+
+        <div class="products">
+          <div class="product">
+            <img
+              src="anh-dep-40.jpg"
+              alt="Product Image"
+              style="max-width: 120px"
+            />
+            <h4>Lorem ipsum dolor</h4>
+            <div class="price">
+              $129.01
+              <span class="discount">▼ 10%</span>
+            </div>
+          </div>
+          <!-- Repeat the product div as needed -->
+          <div class="product">
+            <img
+              src="anh-dep-40.jpg"
+              alt="Product Image"
+              style="max-width: 120px"
+            />
+            <h4>Lorem ipsum dolor</h4>
+            <div class="price">
+              $129.01
+              <span class="discount">▼ 10%</span>
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="anh-dep-40.jpg"
+              alt="Product Image"
+              style="max-width: 120px"
+            />
+            <h4>Lorem ipsum dolor</h4>
+            <div class="price">
+              $129.01
+              <span class="discount">▼ 10%</span>
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="anh-dep-40.jpg"
+              alt="Product Image"
+              style="max-width: 120px"
+            />
+            <h4>Lorem ipsum dolor</h4>
+            <div class="price">
+              $129.01
+              <span class="discount">▼ 10%</span>
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="anh-dep-40.jpg"
+              alt="Product Image"
+              style="max-width: 120px"
+            />
+            <h4>Lorem ipsum dolor</h4>
+            <div class="price">
+              $129.01
+              <span class="discount">▼ 10%</span>
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="anh-dep-40.jpg"
+              alt="Product Image"
+              style="max-width: 120px"
+            />
+            <h4>Lorem ipsum dolor</h4>
+            <div class="price">
+              $129.01
+              <span class="discount">▼ 10%</span>
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="anh-dep-40.jpg"
+              alt="Product Image"
+              style="max-width: 120px"
+            />
+            <h4>Lorem ipsum dolor</h4>
+            <div class="price">
+              $129.01
+              <span class="discount">▼ 10%</span>
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="anh-dep-40.jpg"
+              alt="Product Image"
+              style="max-width: 120px"
+            />
+            <h4>Lorem ipsum dolor</h4>
+            <div class="price">
+              $129.01
+              <span class="discount">▼ 10%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pagination">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>...</button>
+          <button>50</button>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <p>My Shop</p>
+      <p>📍 22C Somewhere, Ha Noi</p>
+      <p>📞 09876543210</p>
+    </footer>
+  </body>
+</html>

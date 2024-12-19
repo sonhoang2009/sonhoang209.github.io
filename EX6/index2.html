@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        background-color: #f9e5b5;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+      }
+
+      header .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      header .logo img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      header nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      }
+
+      .cart {
+        background-color: #f1f5ff;
+        padding: 5px 10px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+
+      .image-gallery {
+        width: 50%;
+        padding-right: 20px;
+      }
+
+      .image-gallery .main-image {
+        width: 100%;
+        height: auto;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+      }
+
+      .image-gallery .thumbnail-images {
+        display: flex;
+        gap: 10px;
+      }
+
+      .image-gallery .thumbnail-images img {
+        width: 60px;
+        height: 60px;
+        border: 1px solid #ccc;
+      }
+
+      .product-details {
+        width: 50%;
+      }
+
+      .product-details h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .product-details p {
+        margin-bottom: 10px;
+      }
+
+      .product-details .options {
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+
+      .product-details .options button {
+        padding: 5px 10px;
+        margin-right: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #e1f5f1;
+      }
+
+      .product-details .price {
+        color: #007bff;
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 5px;
+        padding-left: 35px;
+      }
+
+      .product-details .discount {
+        color: red;
+        font-size: 14px;
+        margin-bottom: 5px;
+        padding-left: 35px;
+      }
+
+      .product-details .rating {
+        margin-bottom: 5px;
+        padding-left: 35px;
+      }
+
+      .product-details .stock {
+        margin-bottom: 10px;
+        padding-left: 35px;
+      }
+
+      .product-details .add-to-cart {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .product-details .add-to-cart input {
+        width: 50px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        text-align: center;
+      }
+
+      .product-details .add-to-cart button {
+        padding: 10px 20px;
+        background-color: #ffcccc;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .comments {
+        margin-top: 20px;
+      }
+
+      .comments h3 {
+        margin-bottom: 10px;
+      }
+
+      .comments .comment {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+      }
+
+      .comments .comment .header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      .comments .comment .header .name {
+        font-weight: bold;
+      }
+
+      .comments .comment .rating {
+        color: #ffcc00;
+      }
+
+      footer {
+        background-color: #f9e5b5;
+        padding: 10px;
+        text-align: center;
+      }
+
+      footer p {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="placeholder-logo.png" alt="My Shop Logo" />
+        <h3>My Shop</h3>
+      </div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About us</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="cart">My Cart (0)</div>
+    </header>
+
+    <div class="container">
+      <div class="image-gallery">
+        <img
+          class="main-image"
+          src="anh-dep-40.jpg"
+          alt="Main Product Image"
+          style="width: 500px; height: 500px"
+        />
+        <div class="thumbnail-images">
+          <img src="anh-dep-40.jpg" alt="Thumbnail 1" />
+          <img src="anh-dep-40.jpg" alt="Thumbnail 2" />
+          <img src="anh-dep-40.jpg" alt="Thumbnail 3" />
+          <img src="anh-dep-40.jpg" alt="Thumbnail 4" />
+        </div>
+      </div>
+
+      <div class="product-details">
+        <h1>Lorem ipsum dolor</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua eiusmod
+          tempor incididunt ut labore et dolore magna aliqua eiusmod tempor
+          incididunt ut labore et dolore magna aliqua eiusmod tempor incididunt
+          ut labore et dolore magna aliqua .
+        </p>
+
+        <b>Color</b>
+        <div class="options">
+          <button>Blue</button>
+          <button>Red</button>
+          <button>Green</button>
+        </div>
+
+        <b>Design</b>
+        <div class="options">
+          <button>Classic</button>
+          <button>Modern</button>
+        </div>
+
+        <div style="padding-bottom: 10px">
+          <b>Price</b> <span class="price">$129.01</span>
+        </div>
+
+        <div style="padding-bottom: 10px">
+          <b>Discount</b> <span class="discount">10% off</span>
+        </div>
+        <div style="padding-bottom: 10px">
+          <b>Rating</b>
+        </div>
+        <div style="padding-bottom: 10px">
+          <b>Instock</b><span class="stock">1004</span>
+        </div>
+
+        <div class="add-to-cart">
+          <input type="number" value="1" min="1" />
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="comments">
+      <h3>Comments</h3>
+      <div class="comment">
+        <div class="header">
+          <span class="name">Customer 1</span>
+          <span class="rating">★★★★★</span>
+        </div>
+        <p>2022-10-10 19:40:01</p>
+        <p>Excellent product, highly recommend!</p>
+      </div>
+      <div class="comment">
+        <div class="header">
+          <span class="name">Customer 2</span>
+          <span class="rating">★★★★☆</span>
+        </div>
+        <p>2022-10-11 15:20:45</p>
+        <p>Good value for the price.</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>My Shop</p>
+      <p>📍 22C Somewhere, Ha Noi</p>
+      <p>📞 09876543210</p>
+    </footer>
+  </body>
+</html>
